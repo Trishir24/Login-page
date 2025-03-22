@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            animation: changeBackground 10s infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background:  linear-gradient(-45deg, #d8ff2a,#d840a5,#1152a2,#1158b0,#d840a5,#d1fc12);
+            background-size: 400% 400%;
+            
+        }
+        @keyframes changeBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+           
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+            
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+            border: 0px solid #5d5656;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+        .login-container input[type="submit"] {
+            width: 40%;
+            padding: 10px;
+            background-color: #fefeff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 0, 0.2, 0.4);
+            color: #000000;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #000000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username" required id="uname">
+            <input type="password" placeholder="Password" required id="pas">
+            <input type="submit" value="Sign In" onclick="func()">
+        </form>
+    </div>
+    <script>
+        function func(){
+        var email = document.getElementById("uname").value;
+        var pass = document.getElementById("pas").value;
+        if(email == "trishirm@gmail.com" && pass == "123456"){
+            alert("Success Full login !")
+            document.location = 'https://trishir24.github.io/my-information/';
+            
+        }
+        if(email == "trishirm@gmail.com") {
+            alert("Wrong Passeord ! ");
+            
+        }
+        else{
+            alert("Wrong user name & password")
+        }
+
+        }
+
+    </script>
+</body>
+</html>
